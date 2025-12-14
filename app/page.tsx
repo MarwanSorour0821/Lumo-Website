@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Script from 'next/script'
+import Image from 'next/image'
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -63,6 +64,24 @@ export default function Home() {
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       ></div>
+
+      {/* Logo at Top */}
+      <div 
+        className={`absolute top-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center justify-center gap-1 transition-opacity duration-1000 ease-in-out delay-500 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <Image 
+          src="/images/in-page-logo.png" 
+          alt="Lumo Logo" 
+          width={24} 
+          height={24}
+          className="h-5 w-auto md:h-6 lg:h-7"
+        />
+        <span className="text-lg md:text-xl lg:text-2xl font-bold text-white drop-shadow-2xl" style={{ fontFamily: "'Product Sans'" }}>
+          Lumo
+        </span>
+      </div>
 
       {/* Text Overlay */}
       <div 

@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Lumo - Join the Waitlist',
   description: 'Join the Lumo waitlist to be among the first to experience our product',
+  icons: {
+    icon: '/images/Group 10.jpg',
+  },
 }
 
 export default function RootLayout({
