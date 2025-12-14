@@ -77,8 +77,8 @@ export default function Home() {
             Built on your blood.
           </h1>
           
-          <p className="text-base md:text-lg text-white/90 mb-8 drop-shadow-lg" style={{ fontFamily: "'Product Sans'" }}>
-            We read your blood work and explain what it means — simply <br /> and what to do about it.
+          <p className="text-sm md:text-base lg:text-lg text-white/90 mb-8 drop-shadow-lg" style={{ fontFamily: "'Product Sans'" }}>
+            We read your blood work and explain what it means — simply <span className="hidden md:inline"><br /></span> and what to do about it.
           </p>
 
           {/* Email Input Form */}
