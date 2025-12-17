@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Script from 'next/script'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -65,9 +66,40 @@ export default function Home() {
         }`}
       ></div>
 
+      {/* Footer Links at Top */}
+      <div 
+        className={`absolute top-4 left-1/2 transform -translate-x-1/2 z-20 flex flex-wrap items-center justify-center gap-4 transition-opacity duration-1000 ease-in-out delay-500 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <Link 
+          href="/terms" 
+          className="text-white/80 hover:text-white text-xs md:text-sm transition-colors duration-200 drop-shadow-md" 
+          style={{ fontFamily: "'Product Sans'" }}
+        >
+          Terms of Service
+        </Link>
+        <span className="text-white/60 text-xs md:text-sm">•</span>
+        <Link 
+          href="/privacy" 
+          className="text-white/80 hover:text-white text-xs md:text-sm transition-colors duration-200 drop-shadow-md" 
+          style={{ fontFamily: "'Product Sans'" }}
+        >
+          Privacy Policy
+        </Link>
+        <span className="text-white/60 text-xs md:text-sm">•</span>
+        <Link 
+          href="/support" 
+          className="text-white/80 hover:text-white text-xs md:text-sm transition-colors duration-200 drop-shadow-md" 
+          style={{ fontFamily: "'Product Sans'" }}
+        >
+          Support
+        </Link>
+      </div>
+
       {/* Logo at Top */}
       <div 
-        className={`absolute top-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center justify-center gap-1 transition-opacity duration-1000 ease-in-out delay-500 ${
+        className={`absolute top-16 md:top-20 left-1/2 transform -translate-x-1/2 z-20 flex items-center justify-center gap-1 transition-opacity duration-1000 ease-in-out delay-500 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >

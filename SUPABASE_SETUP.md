@@ -76,3 +76,4 @@ npm run dev
 - **Duplicate email error**: The table has a UNIQUE constraint on email to prevent duplicates
 - **RLS policy errors**: Make sure you've run the SQL commands to set up Row Level Security policies
 
+
